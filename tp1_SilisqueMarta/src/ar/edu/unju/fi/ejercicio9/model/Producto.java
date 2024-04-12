@@ -4,12 +4,16 @@ public class Producto {
 	private String nombre;
 	private String codigo;
 	private float  precio;
-	private float descuento;
+	private int descuento;
 	
 	
-	//public float calcularDescuento{
+	public float  calcularDescuento(){
+		float descuento2;
+		descuento2 =( this.descuento *this.precio) /100;
+		float resultado = this.precio - descuento2;
 		
-	//}
+		return resultado ;
+	}
 	
 	
 	public Producto() {
@@ -35,11 +39,26 @@ public class Producto {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	public float getDescuento() {
+	public int getDescuento() {
 		return descuento;
 	}
-	public void setDescuento(float descuento) {
+	
+	public void setDescuento(int descuento) {
 		this.descuento = descuento;
+		
+		if(descuento >=0 && descuento <=50) {
+			this.descuento=descuento;
+		}else {
+			System.out.println("ERROR el descuento no pertenece al rango");
+				
+		}
+	}
+
+
+	@Override
+	public String toString() {
+		return "Producto [nombre=" + nombre + ", codigo=" + codigo + ", precio=" + precio + ", descuento=" + descuento
+				+ "]";
 	}
 	
 	
