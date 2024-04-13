@@ -6,22 +6,15 @@ public class Persona {
 	private String nombre;
 	private Calendar fechaNacimiento ;
 	
-	/*public int edad() {
+	public int edad() {
 		Calendar fechaActual = Calendar.getInstance();
-		int añoActual = fechaActual.get(Calendar.YEAR);
-		int mesActual = fechaActual.get(Calendar.MONTH) + 1; 
-		int diaActual = fechaActual.get(Calendar.DAY_OF_MONTH);
+		
 		int fechaq=this.fechaNacimiento.get(Calendar.YEAR);
-		int edad = fechaActual.add(Calendar.YEAR, );
-		
-		if (mesActual < this.fechaNacimiento.get(Calendar.MONTH) ||  mesActual == this.fechaNacimiento.get(Calendar.MONTH) && diaActual < this.fechaNacimiento.get(Calendar.DAY_OF_MONTH)) {
-            edad--; 
-            
-        }
-		return edad;
-		
-	}*/
+		fechaActual.add(Calendar.YEAR,- fechaq);
+		return fechaActual.get(Calendar.YEAR);	
+	}
 	 
+	
 	public String signoDelSodiaco() {
 		switch (this.fechaNacimiento.get(Calendar.MONTH)) {
         case 1: // Enero

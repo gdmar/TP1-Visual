@@ -33,7 +33,7 @@ public class Main {
 		
 		
 		System.out.println(persona.toString());
-	//	System.out.println("Edad: "+ persona.edad());
+		System.out.println("Edad: "+ persona.edad());
 		System.out.println("Signo Sodiacal:  "+persona.signoDelSodiaco());
 		System.out.println("Estacion : "+persona.estacion());
 
